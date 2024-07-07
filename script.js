@@ -15,16 +15,26 @@ function createSquare(){
   newSquare.appendChild(newContent)
   container.appendChild(newSquare)
   newSquare.setAttribute("id", "grid-square")
+  newSquare.addEventListener("click", function(){
+    newSquare.style = "background: black;"
+  })
 }
 
 let squareWidth = +prompt("Enter width: ")
 let squareHeight = +prompt("Enter height")
 let size = squareWidth*squareHeight
 
+
 for (i=0; i<size; i++){
-  createSquare()
+  if (squareWidth > 100 || squareHeight > 100){
+    alert("Number too big")
+    break;
+  } else{
+    createSquare()
+  }
 }
 
 container.style.width = (52*squareWidth) + "px";
 
-// document.getElementById("div#grid-square").style = "background: red;"
+
+
