@@ -15,7 +15,7 @@ function createSquare(){
   newSquare.appendChild(newContent)
   container.appendChild(newSquare)
   newSquare.setAttribute("id", "grid-square")
-  newSquare.addEventListener("click", function(){
+  newSquare.addEventListener("mouseover", function(){
     newSquare.style = "background: black;"
   })
 }
@@ -23,6 +23,7 @@ function createSquare(){
 let squareWidth = +prompt("Enter width: ")
 let squareHeight = +prompt("Enter height")
 let size = squareWidth*squareHeight
+
 
 
 for (i=0; i<size; i++){
